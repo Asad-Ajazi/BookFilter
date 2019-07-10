@@ -37,7 +37,7 @@ function loadBook(filename,displayName){
 
 // retrieve the statistics for the selected book.
 function getDocStats(fileContent){
-    var docLength = document.getElementById("doclength");
+    var docLength = document.getElementById("docLength");
     var wordCount = document.getElementById("wordCount");
     var charCount = document.getElementById("charCount");
 
@@ -71,6 +71,10 @@ function getDocStats(fileContent){
     // display them on the page.
     ULTemplate(top5Words,document.getElementById("mostUsed"));
     ULTemplate(least5Words,document.getElementById("leastUsed"));
+
+    docLength.innerText = "Document Length: " + text.length;
+    wordCount.innerText = "Word Count: " + wordArray.length;
+
 }
 
 function ULTemplate(items,element){
