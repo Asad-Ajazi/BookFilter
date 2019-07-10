@@ -19,6 +19,10 @@ function loadBook(filename,displayName){
         if(xhr.readyState == 4 && xhr.status == 200){
             currentBook = xhr.responseText;
 
+            //remove line breaks and returns with a <br> to format text properly.
+            // regular expression.
+            currentBook = currentBook.replace(/(?:\r\n|\r\n)/g, '<br>');
+
             document.getElementById("fileContent").innerHTML = currentBook;
 
             var elmnt = document.getElementById("fileContent");
