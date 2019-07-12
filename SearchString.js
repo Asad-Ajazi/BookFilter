@@ -83,7 +83,7 @@ function ULTemplate(items,element){
     let resultsHTML = "";
 
     for(i=0;i<items.length-1;i++){
-        resultsHTML += templateHTML.replace('{{val}}',items[i][0]+ " : "+ items[i][1] + "time(s)");
+        resultsHTML += templateHTML.replace('{{val}}',items[i][0]+ " : "+ items[i][1] + " time(s)");
         //resultsHTML += templateHTML.replace('{{val}}', items[i][0] + " : " + items[i][1] + " time(s)");
     }
     element.innerHTML = resultsHTML;
